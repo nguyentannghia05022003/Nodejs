@@ -1,0 +1,61 @@
+{
+  "name": "project_01",
+  "version": "1.0.0",
+  "description": "NODEJS_ALONE",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "dev": "nodemon",
+    "start:debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register ./src/main.ts"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "node_modules"
+    ],
+    "exec": "ts-node -r tsconfig-paths/register ./src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyentannghia05022003/Nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": {
+    "name": "Tan Nghia",
+    "email": "tannghia0123@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyentannghia05022003/Nodejs/issues"
+  },
+  "homepage": "https://github.com/nguyentannghia05022003/Nodejs#readme",
+  "dependencies": {
+    "bcryptjs": "3.0.3",
+    "dotenv": "16.4.7",
+    "ejs": "3.1.10",
+    "express": "5.0.1",
+    "jsonwebtoken": "9.0.2",
+    "mysql2": "3.12.0",
+    "reflect-metadata": "0.2.2",
+    "typeorm": "0.3.17",
+    "winston": "3.10.0"
+  },
+  "devDependencies": {
+    "@types/ejs": "3.1.5",
+    "@types/express": "5.0.0",
+    "@types/jsonwebtoken": "9.0.9",
+    "@types/node": "22.10.7",
+    "nodemon": "3.1.9",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.7.3"
+  }
+}
