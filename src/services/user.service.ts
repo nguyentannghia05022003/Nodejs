@@ -21,7 +21,9 @@ export class UserService {
     async update(id: number, data: Partial<Admin>) {
         const user = await this.userRepo.findOneBy({ id });
         if (!user) throw new Error("User not found");
-        Object.assign(user, data);
+        // Loại bỏ password khỏi data - không cho phép update password qua endpoint này
+        const { password, ...updateData } = data;
+        Object.assign(user, updateData);
         return this.userRepo.save(user);
     }
 

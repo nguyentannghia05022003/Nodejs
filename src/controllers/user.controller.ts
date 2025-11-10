@@ -23,6 +23,12 @@ export class UserController {
 
     static async update(req: Request, res: Response) {
         try {
+            // Không cho phép update password qua endpoint này
+            if (req.body.password) {
+                return res.status(400).json({
+                    message: "Cannot update password through this endpoint."
+                });
+            }
             const id = parseInt(req.params.id);
             const updated = await userService.update(id, req.body);
             return res.json(updated);
