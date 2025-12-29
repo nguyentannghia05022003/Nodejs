@@ -1,0 +1,74 @@
+{
+  "name": "project_01",
+  "version": "1.0.0",
+  "description": "NODEJS_ALONE",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "dev": "nodemon",
+    "start:debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register ./src/main.ts",
+    "init-admin": "ts-node -r tsconfig-paths/register ./src/scripts/init-admin.ts"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "node_modules"
+    ],
+    "exec": "ts-node -r tsconfig-paths/register ./src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyentannghia05022003/Nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": {
+    "name": "Tan Nghia",
+    "email": "tannghia0123@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyentannghia05022003/Nodejs/issues"
+  },
+  "homepage": "https://github.com/nguyentannghia05022003/Nodejs#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "bcryptjs": "3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "cors": "^2.8.5",
+    "dayjs": "1.11.19",
+    "dotenv": "16.4.7",
+    "ejs": "3.1.10",
+    "express": "5.0.1",
+    "express-validator": "7.0.1",
+    "i": "0.3.7",
+    "jsonwebtoken": "9.0.2",
+    "multer": "2.0.2",
+    "mysql2": "3.12.0",
+    "npm": "11.6.2",
+    "reflect-metadata": "0.2.2",
+    "swagger-ui-express": "5.0.1",
+    "typeorm": "0.3.17",
+    "winston": "3.10.0"
+  },
+  "devDependencies": {
+    "@types/ejs": "3.1.5",
+    "@types/express": "5.0.0",
+    "@types/jsonwebtoken": "9.0.9",
+    "@types/multer": "2.0.0",
+    "@types/node": "22.10.7",
+    "@types/swagger-ui-express": "4.1.6",
+    "nodemon": "3.1.9",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.7.3"
+  }
+}
