@@ -1,10 +1,10 @@
-import { Router } from "express";
-import adminRoutes from "./admin";
-
+import { Router } from 'express';
+import adminRoutes from './admin';
+import clientRoutes from './client';
 
 const router = Router();
 
-// API Admin
-router.use("/admin", adminRoutes);
+router.use('/admin', adminRoutes);
+router.use('/customer', clientRoutes);
 
 export default router;
